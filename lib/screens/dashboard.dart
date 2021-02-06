@@ -1,6 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:multi_learn/widgets/navigationBar.dart';
+import 'dart:developer' as developer;
+
+import 'package:multi_learn/widgets/peoplenearyou.dart';
 
 class Dashboard extends StatefulWidget{
   @override
@@ -10,6 +14,7 @@ class Dashboard extends StatefulWidget{
 class _DashboardState extends State<Dashboard> {
   @override
   Widget build(BuildContext context) {
+    developer.log("Dashboard rebuild");
     return Scaffold(
       body:
           Container(
@@ -24,18 +29,13 @@ class _DashboardState extends State<Dashboard> {
                 )),
           child: Column(
             verticalDirection: VerticalDirection.up,
-            children: <Widget>[
+            children: <Widget>[ //TODO: refactor to widget
+             NavigationBar(),
               Align(
                 alignment: Alignment.bottomCenter,
-                child: Container(
-                  decoration: BoxDecoration(
-                    color: HexColor("#8FB3D5"),
-                    borderRadius: BorderRadius.all(Radius.circular(20))
-                  ),
-                  height: (MediaQuery.of(context).size.height)*0.77,
-                  width: (MediaQuery.of(context).size.width)*0.84,
-                  // color: HexColor("#8FB3D5"),
-                ),
+                child:
+                PeopleNearYou(),
+
               ),
             ],
           )
