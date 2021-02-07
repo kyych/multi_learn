@@ -6,7 +6,7 @@ import 'dart:developer' as developer;
 
 import 'package:multi_learn/widgets/peoplenearyou.dart';
 
-class Dashboard extends StatefulWidget{
+class Dashboard extends StatefulWidget {
   @override
   _DashboardState createState() => _DashboardState();
 }
@@ -16,30 +16,42 @@ class _DashboardState extends State<Dashboard> {
   Widget build(BuildContext context) {
     developer.log("Dashboard rebuild");
     return Scaffold(
-      body:
-          Container(
-            decoration: new BoxDecoration(
-                gradient: new LinearGradient(
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                  colors: [
-                    HexColor("#3F497B"),
-                    HexColor("#7EAAD1")
-                  ],
-                )),
+      body: Container(
+          decoration: new BoxDecoration(
+              gradient: new LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: [HexColor("#3F497B"), HexColor("#7EAAD1")],
+          )),
           child: Column(
             verticalDirection: VerticalDirection.up,
-            children: <Widget>[ //TODO: refactor to widget
-             NavigationBar(),
+            children: <Widget>[
+              //TODO: refactor to widgets here
+              NavigationBar(),
               Align(
                 alignment: Alignment.bottomCenter,
-                child:
-                PeopleNearYou(),
+                child: PeopleNearYou(),
+              ),
+              // Align( //TODO: ADD location, messages
+              //   child: Text('7 new messages\nLocation: Warsaw'),
+              //   alignment: Alignment.topLeft,
+              // ),
 
+              Align(
+                // profile picture
+                child: IconButton(
+                  icon: Image.asset('assets/images/hPerson.jpg'),
+                  onPressed: _someMethod,
+                  iconSize: 100,
+                ),
+                alignment: Alignment.topRight,
               ),
             ],
-          )
-          ),
+          )),
     );
+  }
+
+  void _someMethod() {
+    //TODO: remove this method from here...
   }
 }

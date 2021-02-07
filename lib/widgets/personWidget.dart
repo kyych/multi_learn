@@ -5,6 +5,8 @@ class PersonWidget extends StatelessWidget {
   String name, wantsToLearn;
   String message;
 
+  //TODO: add photo of person
+
   @override
   Widget build(BuildContext context) {
     return FlatButton(onPressed: _personPressed, child: Text('${message}'));
@@ -12,5 +14,7 @@ class PersonWidget extends StatelessWidget {
 
   PersonWidget(this.message) {}
 
-  void _personPressed() {}
+  void _personPressed() {
+    //TODO: profilePage open
+  }
 }
