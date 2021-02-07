@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "505277042859",
+    "project_id": "multi-learn-48e7e",
+    "storage_bucket": "multi-learn-48e7e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:505277042859:android:9d493182294d6d6fe5e7ee",
+        "android_client_info": {
+          "package_name": "pl.brnat.multi_learn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "505277042859-crl8d5998251p0lu95m3gk21ljb0f5vv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqflZM8u1fsQ8bjDq_GjLR8krB_znAOQM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "505277042859-crl8d5998251p0lu95m3gk21ljb0f5vv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
