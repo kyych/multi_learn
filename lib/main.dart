@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:multi_learn/screens/dashboard.dart';
 import 'package:multi_learn/screens/initscreen.dart';
 
 void main() => runApp(MyApp());
@@ -11,7 +10,7 @@ class MyApp extends StatelessWidget {
     SystemChrome.setEnabledSystemUIOverlays([]);
     return MaterialApp(
       title: 'MultiLearn',
-      debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: true,
       home: InitScreen(),
     );
   }
