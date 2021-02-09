@@ -57,6 +57,7 @@ class _LoginBoxState extends State<LoginBox> {
                 width: 78,
               ),
               FlatButton(
+                onPressed: signupClicked,
                 child: Text('Signup'),
               ),
             ],
@@ -69,6 +70,13 @@ class _LoginBoxState extends State<LoginBox> {
   }
 
   void loginClicked() {
-    developer.log(loginTextController.text);
+    developer.log('[LoginBox Widget]login button clicked');
+    // developer.log(loginTextController.text);
+    // developer.log(passwordTextController.text);
+  }
+
+  void signupClicked() {
+    //TODO: add new screen for signup
+    developer.log('[LoginBox Widget]signuped clicked');
   }
 }
