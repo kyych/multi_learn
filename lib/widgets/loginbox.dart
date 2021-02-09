@@ -4,6 +4,8 @@ import 'package:hexcolor/hexcolor.dart';
 
 import 'dart:developer' as developer;
 
+import 'package:multi_learn/screens/signupscreen.dart';
+
 class LoginBox extends StatefulWidget {
   _LoginBoxState createState() => _LoginBoxState();
 }
@@ -78,5 +80,7 @@ class _LoginBoxState extends State<LoginBox> {
   void signupClicked() {
     //TODO: add new screen for signup
     developer.log('[LoginBox Widget]signuped clicked');
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => SignupScreen()));
   }
 }

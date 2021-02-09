@@ -1,17 +1,15 @@
-import 'dart:ffi';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:hexcolor/hexcolor.dart';
+
 import 'dart:developer' as developer;
 
-import 'package:hexcolor/hexcolor.dart';
 import 'package:multi_learn/widgets/loginbox.dart';
 
-class LoginScreen extends StatefulWidget {
-  _LoginScreenState createState() => _LoginScreenState();
+class SignupScreen extends StatefulWidget {
+  _SignupScreenState createState() => _SignupScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _SignupScreenState extends State<SignupScreen> {
   @override
   Widget build(BuildContext context) {
     developer.log('Login screen launched');
@@ -34,6 +32,10 @@ class _LoginScreenState extends State<LoginScreen> {
                 fontSize: 33,
               ),
             ),
+          ),
+          Text(
+            'Signup',
+            style: TextStyle(fontSize: 28),
           ),
           Padding(
             padding: EdgeInsets.only(top: 175),
