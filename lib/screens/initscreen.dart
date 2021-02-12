@@ -6,11 +6,12 @@ import 'package:multi_learn/screens/loginscreen.dart';
 class InitScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder<FirebaseUser>(
-        future: FirebaseAuth.instance.currentUser(),
-        builder: (BuildContext context, AsyncSnapshot<FirebaseUser> snapshot) {
+    return FutureBuilder<User>(
+        future: Future.value(FirebaseAuth.instance.currentUser),
+        builder: (BuildContext context, AsyncSnapshot<User> snapshot) {
           if (snapshot.hasData) {
-            FirebaseUser user = snapshot.data; // this is your user instance
+            User user = snapshot.data;
+
             /// is because there is user already logged
             return Dashboard();
           }
