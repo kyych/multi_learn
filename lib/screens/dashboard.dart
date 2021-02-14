@@ -50,7 +50,12 @@ class _DashboardState extends State<Dashboard> {
                     width: 79.0,
                     height: 79.0,
                     child: InkWell(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => ProfileScreen()));
+                      },
                     ),
                   ),
                 ),
