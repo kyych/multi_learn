@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:multi_learn/screens/profilescreen.dart';
 import 'package:multi_learn/widgets/navigationBar.dart';
 import 'dart:developer' as developer;
 
@@ -38,11 +39,20 @@ class _DashboardState extends State<Dashboard> {
               // ),
 
               Align(
-                // profile picture
-                child: IconButton(
-                  icon: Image.asset('assets/images/hPerson.jpg'),
-                  onPressed: _someMethod,
-                  iconSize: 100,
+                child: Material(
+                  elevation: 4.0,
+                  shape: CircleBorder(),
+                  clipBehavior: Clip.hardEdge,
+                  color: Colors.transparent,
+                  child: Ink.image(
+                    image: AssetImage('assets/images/hPerson.jpg'),
+                    fit: BoxFit.cover,
+                    width: 79.0,
+                    height: 79.0,
+                    child: InkWell(
+                      onTap: () {},
+                    ),
+                  ),
                 ),
                 alignment: Alignment.topRight,
               ),

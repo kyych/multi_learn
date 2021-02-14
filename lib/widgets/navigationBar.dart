@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:multi_learn/screens/profilescreen.dart';
 
 class NavigationBar extends StatefulWidget {
   @override
@@ -34,5 +35,15 @@ class _NavigationBar extends State<NavigationBar> {
     setState(() {
       _selectedIndex = index;
     });
+    switch (index) {
+      case 0:
+        break;
+      case 1:
+        break;
+      case 2:
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => ProfileScreen()));
+        break;
+    }
   }
 }

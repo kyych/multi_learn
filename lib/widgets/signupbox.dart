@@ -62,9 +62,7 @@ class _SignupBoxState extends State<SignupBox> {
   }
 
   Future<void> signupClicked() async {
-    //TODO: add new screen for signup
     developer.log('[LoginBox Widget]signuped clicked');
-
     try {
       UserCredential user = await FirebaseAuth.instance
           .createUserWithEmailAndPassword(
