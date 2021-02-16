@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:multi_learn/screens/dashboard.dart';
 import 'package:multi_learn/screens/loginscreen.dart';
+import 'package:multi_learn/screens/mainscreen.dart';
 
 class InitScreen extends StatelessWidget {
   @override
@@ -13,7 +13,7 @@ class InitScreen extends StatelessWidget {
             User user = snapshot.data;
 
             /// is because there is user already logged
-            return Dashboard();
+            return MainScreen();
           }
 
           /// other way there is no user logged.

@@ -2,11 +2,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
-class ProfileScreen extends StatefulWidget {
-  _ProfileScreen createState() => _ProfileScreen();
+class DashBoardScreen extends StatefulWidget {
+  _DashBoardScreen createState() => _DashBoardScreen();
 }
 
-class _ProfileScreen extends State<ProfileScreen> {
+class _DashBoardScreen extends State<DashBoardScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,7 +17,7 @@ class _ProfileScreen extends State<ProfileScreen> {
         end: Alignment.bottomRight,
         colors: [HexColor("#3F497B"), HexColor("#7EAAD1")],
       )),
-      child: Center(child: Text('Profile')),
+      child: Center(child: Text('dashboard')),
     ));
   }
 }
