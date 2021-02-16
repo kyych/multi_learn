@@ -34,8 +34,10 @@ class _PeopleNearYou extends State<PeopleNearYou> {
   Widget build(BuildContext context) {
     return Container(
         decoration: BoxDecoration(
-            color: HexColor("#8FB3D5"),
-            borderRadius: BorderRadius.all(Radius.circular(20))),
+          color: HexColor("#8FB3D5"),
+          borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(20), topRight: Radius.circular(20)),
+        ),
         height: (MediaQuery.of(context).size.height) * 0.77,
         width: (MediaQuery.of(context).size.width) * 0.84,
         child: Column(children: <Widget>[

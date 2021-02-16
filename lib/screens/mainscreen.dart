@@ -24,7 +24,7 @@ class _MainScreenState extends State<MainScreen> {
         label: 'Home',
       ),
       BottomNavigationBarItem(
-        icon: Icon(Icons.info_outline),
+        icon: Icon(Icons.perm_identity),
         label: 'Profile',
       ),
     ];
@@ -74,6 +74,7 @@ class _MainScreenState extends State<MainScreen> {
     return Scaffold(
       body: buildPageView(),
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: HexColor("#627499"),
         currentIndex: bottomSelectedIndex,
         items: buildBottomNavBarItems(),
         onTap: (index) {
