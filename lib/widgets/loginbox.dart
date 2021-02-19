@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
@@ -71,8 +72,20 @@ class _LoginBoxState extends State<LoginBox> {
     );
   }
 
-  void loginClicked() {
+  Future<void> loginClicked() async {
     developer.log('[LoginBox Widget]login button clicked');
+    try {
+      UserCredential userCredential = await FirebaseAuth.instance
+          .signInWithEmailAndPassword(
+              email: loginTextController.text,
+              password: passwordTextController.text);
+    } on FirebaseAuthException catch (e) {
+      if (e.code == 'user-not-found') {
+        print('No user found for that email.');
+      } else if (e.code == 'wrong-password') {
+        print('Wrong password provided for that user.');
+      }
+    }
     // developer.log(loginTextController.text);
     // developer.log(passwordTextController.text);
   }

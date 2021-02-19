@@ -26,7 +26,7 @@ class _ProfileScreen extends State<ProfileScreen> {
               textColor: Colors.amber,
               child: Text('Logout'),
               onPressed: () async {
-                // Navigator.of(context).pop();
+                Navigator.of(context).pop();
                 Navigator.pushAndRemoveUntil(
                     context,
                     MaterialPageRoute(builder: (context) => LoginScreen()),

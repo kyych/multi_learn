@@ -5,7 +5,7 @@ import 'package:hexcolor/hexcolor.dart';
 
 import 'dart:developer' as developer;
 
-import 'package:multi_learn/screens/signupscreen.dart';
+import 'package:multi_learn/screens/mainscreen.dart';
 
 class SignupBox extends StatefulWidget {
   _SignupBoxState createState() => _SignupBoxState();
@@ -78,7 +78,12 @@ class _SignupBoxState extends State<SignupBox> {
     } catch (e) {
       print(e);
     }
-    // Navigator.push(
-    //     context, MaterialPageRoute(builder: (context) => SignupScreen()));
+
+    FirebaseAuth.instance.authStateChanges().listen((User user) {
+      if (user != null) {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => MainScreen()));
+      }
+    });
   }
 }
