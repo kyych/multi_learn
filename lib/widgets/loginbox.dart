@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:multi_learn/screens/mainscreen.dart';
 
 import 'dart:developer' as developer;
 
@@ -86,6 +87,12 @@ class _LoginBoxState extends State<LoginBox> {
         print('Wrong password provided for that user.');
       }
     }
+    FirebaseAuth.instance.authStateChanges().listen((User user) {
+      if (user != null) {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => MainScreen()));
+      }
+    });
     // developer.log(loginTextController.text);
     // developer.log(passwordTextController.text);
   }
