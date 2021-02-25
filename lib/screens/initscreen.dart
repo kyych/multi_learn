@@ -12,7 +12,7 @@ class InitScreen extends StatelessWidget {
         builder: (BuildContext context, AsyncSnapshot<User> snapshot) {
           if (snapshot.hasData) {
             // User user = snapshot.data;
-            LearnUser(user: snapshot.data);
+            LearnUser(user: snapshot.data!);
 
             /// is because there is user already logged
             return MainScreen();

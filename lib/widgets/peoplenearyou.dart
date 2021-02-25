@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:multi_learn/widgets/personWidget.dart';
+import 'package:multi_learn/widgets/person_widget.dart';
 
 class PeopleNearYou extends StatefulWidget {
   @override

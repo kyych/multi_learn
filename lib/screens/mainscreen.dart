@@ -15,15 +15,15 @@ class _MainScreenState extends State<MainScreen> {
   int bottomSelectedIndex = 1;
   List<BottomNavigationBarItem> buildBottomNavBarItems() {
     return [
-      BottomNavigationBarItem(
+      const BottomNavigationBarItem(
         icon: Icon(Icons.person_search),
         label: 'Search for people',
       ),
-      BottomNavigationBarItem(
+      const BottomNavigationBarItem(
         icon: Icon(Icons.home),
         label: 'Home',
       ),
-      BottomNavigationBarItem(
+      const BottomNavigationBarItem(
         icon: Icon(Icons.perm_identity),
         label: 'Profile',
       ),

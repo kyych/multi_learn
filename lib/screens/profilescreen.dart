@@ -13,8 +13,8 @@ class _ProfileScreen extends State<ProfileScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
-      decoration: new BoxDecoration(
-          gradient: new LinearGradient(
+      decoration: BoxDecoration(
+          gradient: LinearGradient(
         begin: Alignment.topLeft,
         end: Alignment.bottomRight,
         colors: [HexColor("#3F497B"), HexColor("#7EAAD1")],
@@ -24,7 +24,7 @@ class _ProfileScreen extends State<ProfileScreen> {
           Center(child: Text('Profile')),
           FlatButton(
               textColor: Colors.amber,
-              child: Text('Logout'),
+              child: const Text('Logout'),
               onPressed: () async {
                 Navigator.of(context).pop();
                 Navigator.pushAndRemoveUntil(

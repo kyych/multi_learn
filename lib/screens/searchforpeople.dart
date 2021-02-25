@@ -11,13 +11,13 @@ class _SearchForPeopleScreen extends State<SearchForPeopleScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
-      decoration: new BoxDecoration(
-          gradient: new LinearGradient(
+      decoration: BoxDecoration(
+          gradient: LinearGradient(
         begin: Alignment.topLeft,
         end: Alignment.bottomRight,
         colors: [HexColor("#3F497B"), HexColor("#7EAAD1")],
       )),
-      child: Center(child: Text('search')),
+      child: const Center(child: Text('search')),
     ));
   }
 }

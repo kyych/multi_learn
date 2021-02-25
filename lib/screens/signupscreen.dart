@@ -15,8 +15,8 @@ class _SignupScreenState extends State<SignupScreen> {
     developer.log('Login screen launched');
     return Scaffold(
         body: Container(
-      decoration: new BoxDecoration(
-          gradient: new LinearGradient(
+      decoration: BoxDecoration(
+          gradient: LinearGradient(
         begin: Alignment.topLeft,
         end: Alignment.bottomRight,
         colors: [HexColor("#3F497B"), HexColor("#7EAAD1")],

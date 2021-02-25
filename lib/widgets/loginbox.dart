@@ -31,6 +31,8 @@ class _LoginBoxState extends State<LoginBox> {
         color: HexColor('#8FB3f5'),
         borderRadius: BorderRadius.all(Radius.circular(37)),
       ),
+      height: 320,
+      width: 330,
       child: Column(
         children: <Widget>[
           Padding(
@@ -53,14 +55,14 @@ class _LoginBoxState extends State<LoginBox> {
           ),
           Row(
             children: <Widget>[
-              FlatButton(
+              TextButton(
                 onPressed: loginClicked,
                 child: Text('Login'),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 78,
               ),
-              FlatButton(
+              TextButton(
                 onPressed: signupClicked,
                 child: Text('Signup'),
               ),
@@ -68,8 +70,6 @@ class _LoginBoxState extends State<LoginBox> {
           ),
         ],
       ),
-      height: 320,
-      width: 330,
     );
   }
 
@@ -87,7 +87,7 @@ class _LoginBoxState extends State<LoginBox> {
         print('Wrong password provided for that user.');
       }
     }
-    FirebaseAuth.instance.authStateChanges().listen((User user) {
+    FirebaseAuth.instance.authStateChanges().listen((User? user) {
       if (user != null) {
         Navigator.push(
             context, MaterialPageRoute(builder: (context) => MainScreen()));

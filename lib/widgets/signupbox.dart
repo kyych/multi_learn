@@ -30,10 +30,12 @@ class _SignupBoxState extends State<SignupBox> {
         color: HexColor('#8FB3f5'),
         borderRadius: BorderRadius.all(Radius.circular(37)),
       ),
+      height: 320,
+      width: 330,
       child: Column(
         children: <Widget>[
           Padding(
-            padding: EdgeInsets.all(30),
+            padding: const EdgeInsets.all(30),
             child: Column(
               children: <TextField>[
                 TextField(
@@ -50,14 +52,12 @@ class _SignupBoxState extends State<SignupBox> {
               ],
             ),
           ),
-          FlatButton(
+          TextButton(
             onPressed: signupClicked,
             child: Text('Signup'),
           ),
         ],
       ),
-      height: 320,
-      width: 330,
     );
   }
 
@@ -79,7 +79,7 @@ class _SignupBoxState extends State<SignupBox> {
       print(e);
     }
 
-    FirebaseAuth.instance.authStateChanges().listen((User user) {
+    FirebaseAuth.instance.authStateChanges().listen((User? user) {
       if (user != null) {
         Navigator.push(
             context, MaterialPageRoute(builder: (context) => MainScreen()));

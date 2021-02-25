@@ -1,9 +1,7 @@
-import 'dart:ffi';
+import 'dart:developer' as developer;
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'dart:developer' as developer;
-
 import 'package:hexcolor/hexcolor.dart';
 import 'package:multi_learn/widgets/loginbox.dart';
 
@@ -17,16 +15,16 @@ class _LoginScreenState extends State<LoginScreen> {
     developer.log('Login screen launched');
     return Scaffold(
         body: Container(
-      decoration: new BoxDecoration(
-          gradient: new LinearGradient(
+      decoration: BoxDecoration(
+          gradient: LinearGradient(
         begin: Alignment.topLeft,
         end: Alignment.bottomRight,
-        colors: [HexColor("#3F497B"), HexColor("#7EAAD1")],
+        colors: [HexColor('#3F497B'), HexColor('#7EAAD1')],
       )),
       child: Column(
         // mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          Align(
+          const Align(
             alignment: Alignment.topLeft,
             child: Text(
               'MultiLearn',
@@ -36,7 +34,7 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
           ),
           Padding(
-            padding: EdgeInsets.only(top: 175),
+            padding: const EdgeInsets.only(top: 175),
             child: LoginBox(),
           ),
         ],
