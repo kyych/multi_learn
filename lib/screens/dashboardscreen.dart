@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:hexcolor/hexcolor.dart';
 import 'package:multi_learn/widgets/peoplenearyou.dart';
 
 class DashBoardScreen extends StatefulWidget {
@@ -13,11 +12,11 @@ class _DashBoardScreen extends State<DashBoardScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
                 gradient: LinearGradient(
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
-              colors: [HexColor('#3F497B'), HexColor('#7EAAD1')],
+              colors: [Color(0xfff3F497B), Color(0xfff3F497B)],
             )),
             child: Column(
               children: [

@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:hexcolor/hexcolor.dart';
 import 'package:multi_learn/widgets/person_widget.dart';
 
 class PeopleNearYou extends StatefulWidget {
@@ -34,7 +33,7 @@ class _PeopleNearYou extends State<PeopleNearYou> {
   Widget build(BuildContext context) {
     return Container(
         decoration: BoxDecoration(
-          color: HexColor("#8FB3D5"),
+          color: Color(0xfff8FB3D5),
           borderRadius: BorderRadius.only(
               topLeft: Radius.circular(20), topRight: Radius.circular(20)),
         ),

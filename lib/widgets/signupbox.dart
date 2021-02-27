@@ -1,7 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:hexcolor/hexcolor.dart';
 
 import 'dart:developer' as developer;
 
@@ -27,7 +26,7 @@ class _SignupBoxState extends State<SignupBox> {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: HexColor('#8FB3f5'),
+        color: Color(0xfff8FB3f5),
         borderRadius: BorderRadius.all(Radius.circular(37)),
       ),
       height: 320,

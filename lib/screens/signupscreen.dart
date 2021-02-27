@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:hexcolor/hexcolor.dart';
 
 import 'dart:developer' as developer;
 
@@ -15,16 +14,16 @@ class _SignupScreenState extends State<SignupScreen> {
     developer.log('Login screen launched');
     return Scaffold(
         body: Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
           gradient: LinearGradient(
         begin: Alignment.topLeft,
         end: Alignment.bottomRight,
-        colors: [HexColor("#3F497B"), HexColor("#7EAAD1")],
+        colors: [Color(0xfff3F497B), Color(0xfff7EAAD1)],
       )),
       child: Column(
         // mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          Align(
+          const Align(
             alignment: Alignment.topLeft,
             child: Text(
               'MultiLearn',
@@ -33,7 +32,7 @@ class _SignupScreenState extends State<SignupScreen> {
               ),
             ),
           ),
-          Text(
+          const Text(
             'Signup',
             style: TextStyle(fontSize: 28),
           ),

@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:hexcolor/hexcolor.dart';
 import 'package:multi_learn/screens/dashboardscreen.dart';
 import 'package:multi_learn/screens/profilescreen.dart';
 import 'package:multi_learn/screens/searchforpeople.dart';
@@ -74,7 +73,7 @@ class _MainScreenState extends State<MainScreen> {
     return Scaffold(
       body: buildPageView(),
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: HexColor("#627499"),
+        backgroundColor: Color(0xfff627499),
         currentIndex: bottomSelectedIndex,
         items: buildBottomNavBarItems(),
         onTap: (index) {

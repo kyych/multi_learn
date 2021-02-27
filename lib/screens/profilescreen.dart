@@ -1,7 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:hexcolor/hexcolor.dart';
 import 'package:multi_learn/screens/loginscreen.dart';
 
 class ProfileScreen extends StatefulWidget {
@@ -17,7 +16,7 @@ class _ProfileScreen extends State<ProfileScreen> {
           gradient: LinearGradient(
         begin: Alignment.topLeft,
         end: Alignment.bottomRight,
-        colors: [HexColor("#3F497B"), HexColor("#7EAAD1")],
+        colors: [Color(0xfff3F497B), Color(0xfff7EAAD1)],
       )),
       child: Column(
         children: [

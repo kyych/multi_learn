@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:hexcolor/hexcolor.dart';
 import 'package:multi_learn/screens/profilescreen.dart';
 
 class NavigationBar extends StatefulWidget {
@@ -13,7 +12,7 @@ class _NavigationBar extends State<NavigationBar> {
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
-      backgroundColor: HexColor("#627499"),
+      backgroundColor: Color(0xfff627499),
       items: const <BottomNavigationBarItem>[
         BottomNavigationBarItem(
           icon: Icon(Icons.person_search),
