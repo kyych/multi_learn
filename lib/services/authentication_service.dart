@@ -10,23 +10,27 @@ abstract class BaseAuth {
 class AuthenticationService implements BaseAuth {
   final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
 
+  @override
   Future<String> signIn(String email, String password) async {
     UserCredential userCredential = await _firebaseAuth
         .signInWithEmailAndPassword(email: email, password: password);
     return userCredential.user!.uid;
   }
 
+  @override
   Future<String> signUp(String email, String password) async {
     UserCredential userCredential = await _firebaseAuth
         .createUserWithEmailAndPassword(email: email, password: password);
     return userCredential.user!.uid;
   }
 
+  @override
   Future<User> getCurrentUser() async {
-    final User user = (await _firebaseAuth.currentUser)!;
+    final User user = _firebaseAuth.currentUser!;
     return user;
   }
 
+  @override
   Future<void> signOut() async {
     return _firebaseAuth.signOut();
   }

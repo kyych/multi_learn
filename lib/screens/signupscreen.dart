@@ -1,7 +1,6 @@
-import 'package:flutter/material.dart';
-
 import 'dart:developer' as developer;
 
+import 'package:flutter/material.dart';
 import 'package:multi_learn/widgets/signupbox.dart';
 
 class SignupScreen extends StatefulWidget {

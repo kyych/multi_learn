@@ -1,9 +1,10 @@
+import 'dart:developer' as developer;
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:multi_learn/screens/dashboardscreen.dart';
 import 'package:multi_learn/screens/profilescreen.dart';
 import 'package:multi_learn/screens/searchforpeople.dart';
-import 'dart:developer' as developer;
 
 class MainScreen extends StatefulWidget {
   @override
